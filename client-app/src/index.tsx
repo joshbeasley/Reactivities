@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./App/layout/styles.css";
 import App from "./App/layout/App";
 import * as serviceWorker from "./serviceWorker";
 import "semantic-ui-css/semantic.min.css";
+import ScrollToTop from "./App/layout/ScrollToTop";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<BrowserRouter>
+			<ScrollToTop />
+			<App />
+		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
